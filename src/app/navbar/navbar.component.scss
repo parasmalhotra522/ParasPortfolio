@@ -1,0 +1,43 @@
+.navbar {
+    
+    color:#fff;
+    display:flex;
+    padding:2rem;
+    height:7rem;
+
+    .navbar-brand {
+        font-family: 'Allura', cursive;
+        font-size: 4rem;
+        padding:2rem;
+        color:#fff;
+    }
+    ul {
+        .nav-item {
+            text-align: center;
+            margin:1rem;
+            .nav-link {
+                color: coral;
+                border:1px solid coral !important;
+                border-radius: 10px 0 10px;
+                background: #343a40;
+                padding: 8px 20px;
+                
+            &:hover{
+                color:#fff;
+                background:coral;
+                border:coral;
+            }
+            
+         
+            }
+            .active {
+                color:#fff;
+                background:coral;
+                border:coral; 
+            }
+
+        }
+    }
+
+  
+}

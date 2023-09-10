@@ -1,0 +1,89 @@
+$fontColor:coral;
+$fontFamily:'Montserrat', sans-serif;
+
+           
+.home-component {
+    background-color: #343a40;
+    
+    padding:5rem;
+
+    article {
+        color:#fff;
+        .intro-line {
+            font-family: $fontFamily;
+            font-weight: 600;
+            font-size:3rem;
+        }
+        .body-lines {
+            font-family: $fontFamily;
+            font-weight: 400;
+            font-size:1.2rem;
+            margin-top:1rem;
+            letter-spacing: .2rem;
+        .body-specific {
+            color:$fontColor;
+        }
+        }
+    }
+
+    .image-container {
+        
+        height:auto;
+        width:max-content;
+    
+        .my-image {
+            border:1px solid #fff;
+            height: 20rem;
+            width: 22rem;
+            
+        }
+    }
+   
+}
+
+.recommendations-component {
+    background-color: #343a40;
+    .vertical-line {
+        border-left: 6px solid #fff;
+        height: 31rem;
+    }
+    
+    .header-bar{
+        text-align: center;
+        font-size: 42px;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        font-family:$fontFamily;
+        color:#fff;
+        cursor:pointer; 
+        text-decoration: none;
+        background-image: linear-gradient(351deg, rgba(218,218,224,1) 0%, rgba(249,249,255,1) 35%, rgba(198,204,205,1) 100%);
+        // background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size:5% 4px;
+        border-radius:53px;
+        transition:background-size 1s ease-in-out;
+        padding-bottom:.7rem;
+
+    }
+    
+    .header-bar:hover{
+        background-size: 20% 4px;
+        transition:background-size 1s ease-in-out;
+       
+    }
+
+    .recommendation-box {
+        
+        .recommendation-style {
+            margin:2rem 0 2rem 0;
+            width:100%;
+            height:auto;
+            max-width: fit-content;
+            // border-radius: 10px 0 10px;
+            border-radius:15px 50px 30px 5px; 
+        }
+    }
+    
+}

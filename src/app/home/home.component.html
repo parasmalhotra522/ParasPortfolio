@@ -1,0 +1,38 @@
+<div class="row home-component">
+    <div class="col-md-7 col-sm-12">
+        <br><br><br>
+        <article>
+            <span class="intro-line">Hey I'm Paras Malhotra.</span>
+            <br><br><br>
+            <span class="body-lines">
+                I am a FrontEnd Engineer, I am ready to develop your responsive websites or web based application with latest
+                web frameworks like 
+                <span class="body-specific">Angular</span>, 
+                <span class="body-specific">React Js</span>.
+            </span>
+          
+        </article>
+    </div>
+    <div class="col-md-1 col-sm-12"></div>
+    <div class="col-md-4 col-sm-12">
+       <div class="image-container">
+            <img [src]="imgUrl" class="my-image rounded-circle" alt="image not found">
+
+       </div>
+    </div>
+</div>
+
+<div class="recommendations-component">
+    <h1 class="header-bar">
+       Recommendations
+    </h1>
+    <div class="row" *ngFor="let recommendation of recommendations">
+    
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 recommendation-box" >
+       <img [src]="recommendation" class="recommendation-style" alt="not found">
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+</div>
