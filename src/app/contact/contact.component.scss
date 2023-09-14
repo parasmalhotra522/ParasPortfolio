@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=League+Spartan&family=Montserrat&family=Open+Sans:wght@300&display=swap');
+$fontFamily: 'Montserrat', sans-serif;
+$color: #FF7F50;
+
+.contact-component {
+    background-color: #343a40;
+    padding-top: 4rem;
+
+    letter-spacing: .2rem;
+
+
+    .card {
+        background-color: initial;
+        height: 180px;
+        width: 500px;
+        color: #fff;
+        border: 4px double #fff;
+        margin: 0 120px;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 40px 0;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+
+        font-family: League Spartan, sans-serif;
+        vertical-align: initial;
+        text-decoration: none;
+
+        i {
+            font-size: 50px;
+            color: $color;
+        }
+
+
+        &:hover {
+            height: 220px;
+            width: 550px;
+            padding: 45px 0;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .mail {
+            font-family: League Spartan, sans-serif;
+
+            &:hover {
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.profile-section {
+    .lets-connect {
+        color: #FF7F50;
+        // font-family: $fontFamily;
+        font-family: League Spartan, sans-serif;
+        letter-spacing: .1rem;
+    }
+
+    .social {
+        height: 340px;
+        width: 400px;
+
+        a {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: initial;
+            text-decoration: none;
+        }
+
+        .contacts {
+
+            height: 22%;
+            width: 90%;
+            border: 1px solid coral;
+            border-radius: 0 30px;
+            margin: 10px 0;
+            color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            transition: .4s ease-in-out;
+
+
+            i {
+
+                font-size: 50px;
+
+            }
+
+            &:hover {
+
+                background-color: #fff;
+                color: #000;
+                height: 25%;
+                width: 95%;
+
+                .fa-linkedin {
+                    color: #0072b1;
+                }
+
+                .fa-phone {
+                    color: #04aa6d;
+                }
+
+                .fa-instagram {
+                    color: #f99185;
+                }
+                .fa-github {
+                    color: #171515 ;
+                }
+            }
+        }
+    }
+}

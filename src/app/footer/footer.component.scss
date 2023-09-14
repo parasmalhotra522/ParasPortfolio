@@ -1,0 +1,79 @@
+$btnColor: #FF7F50;
+
+.page-footer{
+    padding-top:4%;
+    background-color:#1B242F;
+    background-size: cover;
+    
+   
+    .button {
+        background-color:#262f38; ; 
+        border: none;
+        color: #fff;
+        padding: 16px 26px 16px 26px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 4%;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+        &:hover{
+            color:#fff;
+           background: #00BFFF;
+           transform:scale(1.1,1.1);
+           box-shadow: 0px 20px 60px rgba(116, 173, 175, 0.8);
+        
+            transition-property: all 2s ease-in;
+            transition-delay: .1s;
+        }
+        
+    .fb{
+        margin-top:20%;
+        .spin:hover{
+            transform:rotateX(10deg);
+        }
+    }
+  
+
+   
+    }
+
+
+    .buttontop {  
+        color:#fff;
+        background-color:$btnColor;
+        padding: .8rem;
+        justify-content: center;
+      
+        margin: 2px 0px 14px 0px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+      
+    
+        &:hover{
+            // background-color:$btnColor; 
+            transform: scaleY(2); 
+            border:1px solid #fff;
+        }
+
+        .spanarrow {
+            padding-top:2rem;
+            &:hover{
+
+                // transition:0s 2s ;  
+            }
+        }
+    }
+
+}
+@media screen and (max-width:576px){
+    .page-footer .buttontop{
+        padding:20px 30px; 
+    }   
+}
+
+

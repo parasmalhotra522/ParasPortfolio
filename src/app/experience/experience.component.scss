@@ -1,0 +1,139 @@
+$fontColor: coral;
+$fontFamily: 'Montserrat', sans-serif;
+
+.experience {
+    padding-top: 4rem;
+
+    .header-bar {
+        text-align: center;
+        font-size: 42px;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        font-family: $fontFamily;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        background-image: linear-gradient(351deg, rgba(218, 218, 224, 1) 0%, rgba(249, 249, 255, 1) 35%, rgba(198, 204, 205, 1) 100%);
+        // background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 5% 4px;
+        border-radius: 53px;
+        transition: background-size 1s ease-in-out;
+        padding-bottom: .7rem;
+
+    }
+
+    .header-bar:hover {
+        background-size: 20% 4px;
+        transition: background-size 1s ease-in-out;
+
+    }
+
+    .accordion {
+
+        .accordion-item {
+            display: flex;
+            flex-direction: column;
+
+            .accordion-header {
+                margin: 0;
+
+                .accordion-heading {
+                    display: block;
+                    border-bottom: 1rem solid #343a40;
+
+                    .timeline {
+                        float: right;
+                        position: relative;
+                    }
+                }
+            }
+
+            .accordion-body {
+                margin-top: 2rem;
+            }
+
+
+        }
+    }
+
+    .accordionSpacing.panel-group .panel+.panel {
+        margin-top: 25px;
+        /* solution with margins */
+    }
+
+
+    .proj-accordion {
+        margin: 2rem;
+
+        .timeline {
+            position: absolute;
+            right: 8%;
+        }
+
+        .proj-desc {
+            font-family: $fontFamily;
+            letter-spacing: 0rem;
+            line-height: 2rem;
+        }
+
+
+        .skill-btn {
+            border-radius: 53px;
+            color: $fontColor;
+            border: 1px solid $fontColor;
+            margin: 1rem;
+
+            &:hover {
+                color: #fff;
+                background: $fontColor;
+                transform: scale(1.1, 1.1);
+                transition: .7s all ease-in-out;
+            }
+        }
+
+    }
+
+
+    .accordion-button::after {
+        background-image: initial;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: initial;
+    }
+}
+
+.project-accordion-heading {
+
+    // color: $fontColor;
+    // background-color: #343a40;
+    &:hover {
+
+
+        .expand-icon {
+            //    color:red;
+            transform: rotate(180deg);
+            font-size: 1.2rem;
+            transition: 1s all ease-in-out;
+
+
+        }
+
+    }
+}
+
+.btn-circle {
+    border: 1px solid #bbb;
+
+    .expand-icon {
+        // color:$fontColor;    
+        font-size: 1.1rem;
+        // position: relative;
+        // padding-left: 1rem;
+        // left: 1rem;
+
+
+    }
+}

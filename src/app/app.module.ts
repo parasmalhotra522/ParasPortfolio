@@ -10,13 +10,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
-
+import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
+import { EducationComponent } from './education/education.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperienceComponent,
+    ContactComponent,
+    FooterComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +33,9 @@ import { SkillsComponent } from './skills/skills.component';
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

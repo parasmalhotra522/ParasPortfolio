@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <div class="row experience">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 col-sm-12">
+            <h1 class="header-bar">
+                Professional Experience
+            </h1>
+            <div class="container" style="padding:8rem;padding-top:2rem;">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item" style="border:none;">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button accordion-heading" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Front End Developer
+                                @ Cognizant Technology Solutions
+                                <span class="timeline text-right">2020 - 2022</span>
+                            </button>
+                        </h2>
+
+
+
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <!-- Will make a new Accordion-->
+                                <div *ngFor="let project of projects">
+                                    <div class="accordion proj-accordion" id={{project.id}}>
+                                        <div class="accordion-item">
+                                            <h2 class="project-accordion-header" id="{{project.id}}">
+                                                <button class="accordion-button project-accordion-heading"
+                                                 type="button"
+                                                    (click)="toggle(project.id, project.isActive)">
+                                                    {{project.projectTitle}}
+                                                    <span class="timeline text-right">{{project.timelines}}
+                                                        <i *ngIf="!project.isActive; else minus" 
+                                                        class="fa fa-plus-circle expand-icon" style="margin-left:3rem;"></i>
+                                                        <ng-template #minus>
+                                                           <i class="fa fa-minus-circle expand-icon" style="margin-left:3rem;">
+                                                        </i>
+                                                        <!-- <button class="btn btn-circle expand-icon">
+                                                            -
+                                                        </button> -->
+                                                        </ng-template>    
+                                                    </span>
+                                                   
+                                                </button>
+                                            </h2>
+                                            <div id="{{project.id}}">
+                                                <div class="accordion-body project-accordion-body"
+                                                style=" margin-top:0;
+                                                padding-top:0;"
+                                                *ngIf="project.isActive">
+                                                    
+                                                    <ul >
+                                                        <li *ngFor="let description of project.descriptions"
+                                                        class="list-item proj-desc">{{description}}</li>
+                                                    </ul>
+                                                    
+                                                    <div class="skills">
+                                                        <button class="btn skill-btn"
+                                                            *ngFor="let skill of project.skills"
+                                                        >{{skill}}</button>
+                                                    </div>
+                                               
+                                               
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- projects list section ends -->
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>

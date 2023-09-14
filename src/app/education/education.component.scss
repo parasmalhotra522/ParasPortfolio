@@ -1,0 +1,82 @@
+$fontColor: coral;
+$fontFamily: 'Montserrat', sans-serif;
+
+@mixin fontSetting($fontSize) {
+    font-weight: bold;
+    font-size:$fontSize;
+    font-family:$fontFamily;
+
+}
+
+.header-bar{
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-family:$fontFamily;
+    color:#fff;
+    cursor:pointer; 
+    text-decoration: none;
+    background-image: linear-gradient(351deg, rgba(218,218,224,1) 0%, rgba(249,249,255,1) 35%, rgba(198,204,205,1) 100%);
+    // background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:5% 4px;
+    border-radius:53px;
+    transition:background-size 1s ease-in-out;
+    padding-bottom:.7rem;
+
+}
+
+.header-bar:hover{
+    background-size: 15% 4px;
+    transition:background-size 1s ease-in-out;
+   
+}
+
+.card {
+    padding:.7rem;
+    margin:.7rem;
+    cursor:pointer;
+    border-radius: 0 30px;
+    box-shadow:  0px 3px 8px;
+    transition: .6s all ease-in-out;
+
+    &:hover {
+        
+        transform: scale3d(1.04,1.04,1.1);
+        box-shadow: $fontColor 0px 3px 8px;
+
+        // margin:2rem;
+    }
+    .card-body{
+        .card-title {
+            display: flex;
+        
+        .title {
+            @include fontSetting(2rem);
+        }
+        .lpulogo {
+            height: 2.9rem;
+            width: 3rem;
+            margin-left:auto;
+        }
+        .stlogo {
+            height: 2.9rem;
+            width:20%;
+            margin-left:auto;
+        }
+    }
+        .card-subtitle {
+            display:flex;
+            margin-top:.9rem;
+            .sub-title {
+                @include fontSetting(.9rem);
+            }
+        }
+        .card-text {
+            font-family: $fontFamily;
+            font-size:.9rem;
+        }
+    }
+}
