@@ -3,24 +3,40 @@
     <div class="col-md-7 col-sm-12">
         <br><br><br>
         <article>
-            <span class="intro-line">Hey I'm Paras Malhotra.</span>
+            <span class="intro-line col-12 col-lg-8">Hey, I'm Paras Malhotra.</span>
             <br><br><br>
             <span class="body-lines">
-                I am a FrontEnd Engineer, I am ready to develop your responsive websites or web based application with latest
+                I am a FrontEnd Web Developer building the Front-end for Websites and Web Applications
+                that leads to success of the overall product.
+                I am ready to develop your responsive websites 
+                or web based application with latest
                 web frameworks like 
                 <span class="body-specific">Angular</span>, 
                 <span class="body-specific">React Js</span>.
+                <br>
+                <div class="body-lines">
+                    I'm a fast paced learner willing to learn new skills that adds up value to the business for the 
+                    organization. I'm good in working as a team and excellent in time management. 
+                </div>
+                <div class="body-lines">
+                    I'm open to Job opportunities where I can contribute, learn and grow.
+                    If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+                </div>
             </span>
           
         </article>
     </div>
-    <div class="col-md-1 col-sm-12"></div>
-    <div class="col-md-4 col-sm-12">
-       <div class="image-container">
-            <img [src]="imgUrl" class="my-image rounded-circle" alt="image not found">
-
-       </div>
-    </div>
+    <!-- <div class="col-md-1 col-sm-1"></div> -->
+    <div class="col-md-4 col-sm-12 col-12 col-lg-4 d-flex justify-content-around">
+        <div class="image-container">
+             <img [src]="imgUrl" class="my-image rounded-circle" alt="image not found">
+ 
+        </div>
+     </div>
+     
+   
+    
+   
 </div>
 
 <div class="recommendations-component">
@@ -38,4 +54,11 @@
     </div>
 </div>
 
+</div>
+
+<div class="mobile-only">
+    <app-skills class="col-sm-12"></app-skills>
+    <app-education class="col-sm-12"></app-education>
+    <app-experience class="col-sm-12"></app-experience>
+    <app-contact class="col-sm-12 d-flex"></app-contact>
 </div>

@@ -5,11 +5,11 @@
             <h1 class="header-bar">
                 Professional Experience
             </h1>
-            <div class="container" style="padding:8rem;padding-top:2rem;">
+            <div class="container" >
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item" style="border:none;">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button accordion-heading" type="button" data-bs-toggle="collapse"
+                            <button class="accordion-button accordion-heading col-md-11 col-sm-12" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Front End Developer
                                 @ Cognizant Technology Solutions
@@ -28,42 +28,47 @@
                                     <div class="accordion proj-accordion" id={{project.id}}>
                                         <div class="accordion-item">
                                             <h2 class="project-accordion-header" id="{{project.id}}">
-                                                <button class="accordion-button project-accordion-heading"
-                                                 type="button"
+                                                <button class="accordion-button project-accordion-heading" type="button"
                                                     (click)="toggle(project.id, project.isActive)">
                                                     {{project.projectTitle}}
                                                     <span class="timeline text-right">{{project.timelines}}
-                                                        <i *ngIf="!project.isActive; else minus" 
-                                                        class="fa fa-plus-circle expand-icon" style="margin-left:3rem;"></i>
+                                                        <i *ngIf="!project.isActive; else minus"
+                                                            class="fa fa-plus-circle expand-icon"
+                                                            style="margin-left:3rem;"></i>
                                                         <ng-template #minus>
-                                                           <i class="fa fa-minus-circle expand-icon" style="margin-left:3rem;">
-                                                        </i>
-                                                        <!-- <button class="btn btn-circle expand-icon">
+                                                            <i class="fa fa-minus-circle expand-icon"
+                                                                style="margin-left:3rem;">
+                                                            </i>
+                                                            <!-- <button class="btn btn-circle expand-icon">
                                                             -
                                                         </button> -->
-                                                        </ng-template>    
+                                                        </ng-template>
                                                     </span>
-                                                   
+
                                                 </button>
                                             </h2>
                                             <div id="{{project.id}}">
-                                                <div class="accordion-body project-accordion-body"
-                                                style=" margin-top:0;
-                                                padding-top:0;"
-                                                *ngIf="project.isActive">
-                                                    
-                                                    <ul >
-                                                        <li *ngFor="let description of project.descriptions"
-                                                        class="list-item proj-desc">{{description}}</li>
+                                                <div class="accordion-body project-accordion-body" style=" margin-top:0;
+                                                padding-top:0;" *ngIf="project.isActive">
+
+                                                    <ul>
+                                                        <h3 class="roles" style="font-weight: bold;">Description</h3>
+                                                        <p class="roles">
+                                                            {{project.description}}
+                                                        
+                                                        </p>
+                                                        <h3 class="roles" style="font-weight: bold;">Roles</h3>
+                                                       
+                                                        <li *ngFor="let role of project.roles"
+                                                            class="list-item proj-desc">{{role}}</li>
                                                     </ul>
-                                                    
+
                                                     <div class="skills">
                                                         <button class="btn skill-btn"
-                                                            *ngFor="let skill of project.skills"
-                                                        >{{skill}}</button>
+                                                            *ngFor="let skill of project.skills">{{skill}}</button>
                                                     </div>
-                                               
-                                               
+
+
                                                 </div>
 
                                             </div>
@@ -86,7 +91,87 @@
 
 
 
+
+
                 </div>
                 <div class="col-md-1"></div>
             </div>
+
+
+            <!-- personal projects area-->
+            <div class="container" style="margin-top:2rem;">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item" style="border:none;">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button accordion-heading" 
+                                (click)="togglePersonalProjects()"
+                                type="button">
+                                Projects
+                            </button>
+                        </h2>
+
+                        <div 
+                        class="accordion-collapse collapse show" *ngIf="showPersonalProjects">
+                            <div class="accordion-body">
+                                <!-- Will make a new Accordion-->
+                                <div *ngFor="let project of personalprojects">
+                                    <div class="accordion proj-accordion" id={{project.id}}>
+                                        <div class="accordion-item">
+                                            <h2 class="project-accordion-header" id="{{project.id}}">
+                                                <button class="accordion-button project-accordion-heading" type="button"
+                                                    (click)="toggleProjects(project.id, project.isActive)">
+                                                    {{project.projectTitle}}
+                                                    <span class="timeline text-right">{{project.timelines}}
+                                                        <i *ngIf="!project.isActive; else minus"
+                                                            class="fa fa-plus-circle expand-icon"
+                                                            style="margin-left:3rem;"></i>
+                                                        <ng-template #minus>
+                                                            <i class="fa fa-minus-circle expand-icon"
+                                                                style="margin-left:3rem;">
+                                                            </i>
+                                                            <!-- <button class="btn btn-circle expand-icon">
+                                                            -
+                                                        </button> -->
+                                                        </ng-template>
+                                                    </span>
+
+                                                </button>
+                                            </h2>
+                                            <div id="{{project.id}}">
+                                                <div class="accordion-body project-accordion-body" style=" margin-top:0;
+                                                padding-top:0;" *ngIf="project.isActive">
+
+                                                    <ul>
+                                                        
+                                                         <h3 class="roles" style="font-weight: bold;">Description </h3>
+                                                         <a [href]="project.gitLink" 
+                                                            class="col-sm-12"
+                                                         target="_blank">{{project.gitLink}}</a>
+                                                        <br>
+                                                         <p class="roles">
+                                                            {{project.description}}
+                                                        
+                                                        </p>
+                                                        <h3 class="roles" style="font-weight: bold;">Roles </h3>
+                                                        <li *ngFor="let role of project.roles"
+                                                            class="list-item proj-desc">{{role}}</li>
+                                                    </ul>
+
+                                                    <div class="skills">
+                                                        <button class="btn skill-btn"
+                                                            *ngFor="let skill of project.skills">{{skill}}</button>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                            </div>
+                        </div>
+
+                     </div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>

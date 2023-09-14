@@ -50,9 +50,7 @@ $fontFamily: 'Montserrat', sans-serif;
                 }
             }
 
-            .accordion-body {
-                margin-top: 2rem;
-            }
+            
 
 
         }
@@ -135,5 +133,50 @@ $fontFamily: 'Montserrat', sans-serif;
         // left: 1rem;
 
 
+    }
+}
+.roles {
+    font-family: $fontFamily;
+    margin-bottom: .5rem;
+}
+@media (max-width:699px) {
+    .container {
+        padding:0 !important;
+        .proj-accordion {
+            .project-accordion-header {
+                .project-accordion-heading {
+
+                
+                font-size:.7rem !important;
+                
+                .timeline {
+                    display:flex;
+                    // position:sticky;
+                    position: fixed;
+                    transition: none !important;
+                    font-size:.7rem !important;
+                    i {
+                        display: none;
+                    }
+                }
+            }
+            }
+            .project-accordion-body {
+                ul {
+                    font-size: .7rem !important;
+                    .roles {
+                        font-size: .7rem !important;
+                    }
+                    
+                }
+                .skills {
+                    display:inline-grid;
+                    .skill-btn {
+                        background-color:$fontColor  !important;
+                        color:#fff;
+                    }
+                }
+            }
+        }
     }
 }

@@ -35,8 +35,10 @@ $fontFamily:'Montserrat', sans-serif;
     .skill-box {
         // box-shadow: 0 12px 32px #fff;
         // box-shadow: 0px 16px 1px #fff;
-        
-                padding:2rem;
+            overflow: hidden;
+                // padding:2rem;
+                display: flex;
+                // margin:.2rem;
         .skill-gif {
             // width:100%;
             // box-shadow:0 4px 8px 0;
@@ -44,15 +46,52 @@ $fontFamily:'Montserrat', sans-serif;
             height:auto;
             height:15rem;
             width:22rem;
+            margin:.3rem;
             cursor: pointer;
             &:hover {
                 transform: scale(1.02,1.02);
-                transition:1s all ease-in;
+                transition:.5s all ease-in;
             }
         }
     }
 }
+@media (max-width: 699px) {
+    .skills-component {
 
+        .header-bar {
+            // justify-content: center;
+            // display:flex;
+            padding-left:2rem;
+        }
+        .skill-box {
+            overflow: hidden;
+            // padding:2rem;
+            justify-content: center;
+            padding-top:1em;
+        }
+
+    }
+    
+}
+
+@media (max-width: 699px) {
+    .skills-component {
+
+        .header-bar {
+            // justify-content: center;
+            // display:flex;
+            padding-left:2rem;
+        }
+        .skill-box {
+            overflow: hidden;
+            // padding:2rem;
+            justify-content: center;
+            padding-top:1em;
+        }
+
+    }
+    
+}
 // section {
     
 //     display: flex;

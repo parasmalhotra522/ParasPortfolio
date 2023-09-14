@@ -17,12 +17,13 @@ $fontFamily:'Montserrat', sans-serif;
         .body-lines {
             font-family: $fontFamily;
             font-weight: 400;
-            font-size:1.2rem;
+            font-size:1rem;
             margin-top:1rem;
             letter-spacing: .2rem;
         .body-specific {
             color:$fontColor;
         }
+        
         }
     }
 
@@ -86,4 +87,35 @@ $fontFamily:'Montserrat', sans-serif;
         }
     }
     
+}
+
+.mobile-only{
+    display: none;
+}
+@media (max-width: 699px) {
+    .home-component{
+        padding:0 !important;
+        // overflow: hidden;
+        .intro-line {
+            line-height: 1em;
+        }
+        .image-container {
+            padding-top:1em;
+            padding-bottom:1em;
+            overflow: hidden;
+        // .my-image{
+         
+        //     // width:fit-content;
+        //     // height: auto;
+        // }
+       
+
+    }
+        padding-top:12rem;
+    }
+
+    .mobile-only {
+        display:block;
+    }
+
 }

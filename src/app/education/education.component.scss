@@ -80,3 +80,19 @@ $fontFamily: 'Montserrat', sans-serif;
         }
     }
 }
+
+@media (max-width: 699px) {
+    .card-title {
+        .title {
+            font-size:1em !important;
+        }
+    }
+    .card-subtitle {
+        .sub-title {
+            font-size:.8em !important;
+        }
+    }
+    .card-text {
+        font-size:.8em !important;
+    }
+}
