@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  imgUrl = "../../assets/myPhoto.jpeg";
+  imgUrl = "../../assets/myPhoto.jpg";
   recommendations : any = [
     "../../assets/shalem-review.png",
     "../../assets/gokul-review.png",

@@ -41,31 +41,33 @@ $btnColor: #FF7F50;
    
     }
 
+    #top-button {
 
-    .buttontop {  
-        color:#fff;
-        background-color:$btnColor;
-        padding: .8rem;
-        justify-content: center;
-      
-        margin: 2px 0px 14px 0px;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-        cursor: pointer;
-      
-    
-        &:hover{
-            // background-color:$btnColor; 
-            transform: scaleY(2); 
-            border:1px solid #fff;
-        }
-
-        .spanarrow {
-            padding-top:2rem;
-            &:hover{
-
-                // transition:0s 2s ;  
+        .buttontop {  
+            color:#fff;
+            background-color:$btnColor;
+            padding:1rem;
+            justify-content: center;
+            margin: 2px 0px 14px 0px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            
+            .spanarrow {
+                transform:translateY(1rem);
             }
+            &:hover{
+                // background-color:$btnColor; 
+                // border:1px solid #fff;  
+                transition:.7s all ease-in-out;
+                filter:drop-shadow(1px 1px 10px $btnColor);
+            .spanarrow {  
+                transform:translateY(0rem);
+                transition:.7s all ease-in-out;
+            }
+
+            }
+            
         }
     }
 

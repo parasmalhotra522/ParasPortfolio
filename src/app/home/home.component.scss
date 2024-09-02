@@ -31,13 +31,24 @@ $fontFamily:'Montserrat', sans-serif;
         
         height:auto;
         width:max-content;
+
+            .my-image {
+                max-width: 100%;  /* Ensures image scales down to fit its container */
+                height: auto;     /* Maintains the aspect ratio */
+                object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+                width: 28rem;     /* Set a specific width */
+                height: 28rem;    /* Set a specific height */
+                border:1px solid #fff;
+                }
     
-        .my-image {
-            border:1px solid #fff;
-            height: 20rem;
-            width: 22rem;
+        // .my-image {
+        //     border:1px solid #fff;
+        //     height: 20rem;
+        //     width: 22rem;
+
+        
             
-        }
+        // }
     }
    
 }
@@ -98,6 +109,7 @@ $fontFamily:'Montserrat', sans-serif;
         // overflow: hidden;
         .intro-line {
             line-height: 1em;
+            font-size:1.9rem !important;
         }
         .image-container {
             padding-top:1em;
@@ -118,4 +130,36 @@ $fontFamily:'Montserrat', sans-serif;
         display:block;
     }
 
+}
+.button {
+    background-color:#FF7F50; ; 
+    border: none;
+    color: #fff;
+    padding: 16px 26px 16px 26px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    justify-content: center;
+    align-items: center;
+    margin:4% auto 0% 30%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: $fontFamily;
+  }
+  @media screen and (max-width:480px){
+   .button {
+        margin:4% auto 4% 30%;
+    }
+  }
+ .button:hover{
+    color:#fff;
+   background: #FF7F50;
+   transform:scale(1.1,1.1);
+   box-shadow: 0px 20px 60px rgba(148, 99, 74, 0.8);
+
+    transition-property: 2s all ease-in-out;
+    transition-delay: .1s;
 }

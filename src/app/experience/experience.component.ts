@@ -129,7 +129,7 @@ export class ExperienceComponent implements OnInit {
           id:"personal-project-4",
           isActive:false,
           projectTitle : "Alpha Retail Store",
-          gitLink:"#",
+          gitLink:"https://github.com/parasmalhotra522/AlphaSports",
           skills : ["MySQL"],
           timelines : "October 2022 - December 2022",
           description: "An retail store that had the backend made using MySQL which mimiked the functionality of the store maintaining record of the employees at particular store, under different departments managing supply from various vendors, warehouses at different locations",

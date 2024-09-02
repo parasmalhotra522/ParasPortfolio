@@ -3,3 +3,38 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 $bgColor :#343a40;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat&family=Open+Sans:wght@300&display=swap');
+
+     /* width */
+::-webkit-scrollbar {
+    width: 6px;
+    background:#343a40;
+    opacity: 0; /* Hide scrollbar */
+    transition: opacity 0.3s ease;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #343a40;
+  border-radius: 10px;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FF7F50;
+  border-radius: 10px;
+   min-height: 2px; /* Sets a minimum height for the thumb */
+    max-height: 4px;
+}
+body:hover ::-webkit-scrollbar-thumb {
+  background: #FF6347;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6347; /* A slightly darker coral color for hover effect */
+}
+
+/* Set up a CSS variable for scrollbar opacity */
