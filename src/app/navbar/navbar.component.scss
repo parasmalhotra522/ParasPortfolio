@@ -34,6 +34,7 @@ $fontColor:#FF7F50;
                 color:#fff;
                 background:coral;
                 border:coral; 
+                transition:.7s all ease-in-out;   
             }
 
         }
@@ -62,6 +63,30 @@ $fontColor:#FF7F50;
         }
 }
 @media screen and (max-width: 600px) {
+    .navbar-brand {
+    font-size:3.5rem !important;
+    // font-size: 4rem;
+    padding: 0rem !important;
+    }
+
+    .navbar-collapsing {
+        // background-color:#FF7F50;
+        margin-bottom: 12rem;
+        padding-bottom:1rem;
+    }
+    .navbar-toggler {
+        display: none !important;
+        // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        // color: #fff;
+        //   background-color:#fff
+    }
+    .navbar-toggler-icon {
+        display: none !important;
+    } 
+
+  }
+
+  @media screen and (max-width: 768px) {
     .navbar-brand {
     font-size:3.5rem !important;
     // font-size: 4rem;

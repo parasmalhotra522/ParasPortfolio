@@ -39,6 +39,11 @@ $fontFamily:'Montserrat', sans-serif;
                 width: 28rem;     /* Set a specific width */
                 height: 28rem;    /* Set a specific height */
                 border:1px solid #fff;
+                
+                &:hover {
+                    transform:scale(1.01);
+                    filter:drop-shadow(1px 1px 3px $fontColor);
+                }
                 }
     
         // .my-image {
@@ -131,6 +136,38 @@ $fontFamily:'Montserrat', sans-serif;
     }
 
 }
+
+
+@media screen and (max-width: 800px) {
+    .home-component{
+        padding:0 !important;
+        // overflow: hidden;
+        .intro-line {
+            line-height: 1em;
+            font-size:1.9rem !important;
+        }
+        .image-container {
+            padding-top:1em;
+            padding-bottom:1em;
+            overflow: hidden;
+
+    }
+        padding-top:12rem;
+        margin-bottom:2rem;
+    }
+
+    // .recommendations-component {
+
+    // }
+    .mobile-only {
+        display:block;
+    }
+
+}
+
+
+
+
 .button {
     background-color:#FF7F50; ; 
     border: none;

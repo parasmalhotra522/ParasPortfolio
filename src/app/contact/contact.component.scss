@@ -64,6 +64,8 @@ $color: #FF7F50;
     .social {
         height: 340px;
         width: 400px;
+    //    padding-left:1rem;
+    //    padding-right: 1rem;;
 
         a {
             margin: 0;
@@ -78,7 +80,8 @@ $color: #FF7F50;
         .contacts {
 
             height: 22%;
-            width: 90%;
+            // width: 90%;
+
             border: 1px solid coral;
             border-radius: 0 30px;
             margin: 10px 0;
@@ -137,3 +140,25 @@ $color: #FF7F50;
         }
     }
 }
+
+
+
+// @media (max-width:768px){
+//     .card {
+//         width:100% !important;
+//         height: auto !important;
+//         // padding:.3rem;
+//         margin:0 !important;
+//         margin-bottom: 1rem !important;
+       
+//         .text {
+//             padding:.3rem !important;
+//             p {
+//                 font-size:1.3em !important;
+//             }
+//         }
+//     }
+// }
+
+
+

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row experience">
         <div class="col-md-1"></div>
         <div class="col-md-10 col-sm-12">
@@ -12,7 +12,7 @@
                             <button class="accordion-button accordion-heading col-md-11 col-sm-12" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Front End Developer
-                                @ Cognizant Technology Solutions
+                                - Cognizant Technology Solutions
                                 <span class="timeline text-right">2020 - 2022</span>
                             </button>
                         </h2>
@@ -23,7 +23,7 @@
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
 
-                                <!-- Will make a new Accordion-->
+                             
                                 <div *ngFor="let project of projects">
                                     <div class="accordion proj-accordion" id={{project.id}}>
                                         <div class="accordion-item">
@@ -39,9 +39,7 @@
                                                             <i class="fa fa-minus-circle expand-icon"
                                                                 style="margin-left:3rem;">
                                                             </i>
-                                                            <!-- <button class="btn btn-circle expand-icon">
-                                                            -
-                                                        </button> -->
+                                                         
                                                         </ng-template>
                                                     </span>
 
@@ -79,7 +77,7 @@
 
                                     </div>
                                 </div>
-                                <!-- projects list section ends -->
+                             
 
 
 
@@ -98,7 +96,7 @@
             </div>
 
 
-            <!-- personal projects area-->
+            
             <div class="container" style="margin-top:2rem;">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item" style="border:none;">
@@ -113,7 +111,7 @@
                         <div 
                         class="accordion-collapse collapse show" *ngIf="showPersonalProjects">
                             <div class="accordion-body">
-                                <!-- Will make a new Accordion-->
+                                
                                 <div *ngFor="let project of personalprojects">
                                     <div class="accordion proj-accordion" id={{project.id}}>
                                         <div class="accordion-item">
@@ -129,10 +127,7 @@
                                                             <i class="fa fa-minus-circle expand-icon"
                                                                 style="margin-left:3rem;">
                                                             </i>
-                                                            <!-- <button class="btn btn-circle expand-icon">
-                                                            -
-                                                        </button> -->
-                                                        </ng-template>
+                                                      </ng-template>
                                                     </span>
 
                                                 </button>
@@ -175,3 +170,155 @@
         </div>
     </div>
 </div>
+
+
+
+
+ -->
+
+
+<!-- <div class="container my-5">
+  <h1 class="text-center mb-5">Professional Experience</h1>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let experience of experiences">
+      <div class="timeline-icon">
+        <img [src]="experience.logo" alt="{{experience.company}} Logo" class="company-logo">
+      </div>
+      <div class="timeline-content">
+        <h4>{{ experience.title }}</h4>
+        <h6>{{ experience.company }}</h6>
+        <p class="timeline-period"><i class="fas fa-calendar-alt me-2"></i>{{ experience.timeline }}</p>
+        <p class="experience-description">{{ experience.shortDescription }}</p>
+        <button class="btn btn-primary btn-sm mt-2" (click)="openExperienceModal(experience)">View Details</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container-fluid">
+  <div class="row experience">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 col-sm-12">
+      <h1 class="header-bar">Professional Experience</h1>
+
+      <div class="experience-item" *ngFor="let exp of experiences">
+        <div class="experience-header" (click)="toggleExperience(exp)">
+          <div class="logo">
+            <img [src]="exp.logo" 
+            alt="{{exp.company}} logo">
+          </div>
+          <div class="details">
+            <h2>{{exp.title}} - {{exp.company}}</h2>
+            <span class="timeline">{{exp.timeline}}</span>
+          </div>
+        </div>
+
+        <div class="experience-content" *ngIf="exp.isActive">
+          <p>{{exp.shortDescription}}</p>
+          <p class="description">{{exp.description}}</p>
+
+          <div class="projects">
+            <h3 *ngIf="!(exp.projects.length == 1 && exp.projects[0].id == 'lambtonProj')">Projects</h3>
+            <div class="project" *ngFor="let project of exp.projects">
+              <h4>{{project.projectTitle}}</h4>
+              <p>{{project.description}}</p>
+              <ul>
+                <li *ngFor="let role of project.roles">{{role}}</li>
+              </ul>
+              <div class="skills">
+                <button class="btn skill-btn" *ngFor="let skill of project.skills">{{skill}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+
+
+ 
+
+
+</div> -->
+
+
+<div class="container-fluid">
+  <div class="row experience">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 col-sm-12">
+      
+      <!-- Professional Experience Section -->
+      <h1 class="header-bar">Professional Experience</h1>
+      <div class="experience-item" *ngFor="let exp of experiences">
+        <div class="experience-header" (click)="toggleExperience(exp)">
+          <div class="logo">
+            <img [src]="exp.logo" alt="{{exp.company}} logo">
+          </div>
+          <div class="details">
+            <h2>{{exp.title}} - {{exp.company}}</h2>
+            <span class="timeline">{{exp.timeline}}</span>
+          </div>
+        </div>
+
+        <div class="experience-content" *ngIf="exp.isActive">
+          <p>{{exp.shortDescription}}</p>
+          <p class="description">{{exp.description}}</p>
+
+          <div class="projects">
+            <h2 *ngIf="!(exp.projects.length === 1 && exp.projects[0].id==='lambtonProj')">Projects</h2>
+            <div class="project" *ngFor="let project of exp.projects">
+              <h4>‣ {{project.projectTitle}}</h4>
+              <p>{{project.description}}</p>
+              <ul>
+                <li *ngFor="let role of project.roles">{{role}}</li>
+              </ul>
+              <div class="skills">
+                <button class="btn skill-btn" *ngFor="let skill of project.skills">{{skill}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Projects Section -->
+      <h1 class="header-bar">Personal Projects</h1>
+      <div class="experience-item" *ngFor="let proj of personalprojects">
+        <div class="experience-header" (click)="togglePersonalProjects(proj)">
+          <div class="details">
+            <h2>{{proj.projectTitle}}</h2>
+            <span class="timeline">{{proj.timelines}}</span>
+          </div>
+        </div>
+
+        <div class="experience-content" *ngIf="proj.isActive">
+            <a [href]="proj.gitLink" 
+            target="_blank" 
+            class="git-btn"
+            type="button"
+            ><i class="fa fa-external-link" style="margin-right: .4rem;"></i>
+            {{proj.btnName}}
+        </a>
+            <p *ngIf="proj.id==='personal-project-1'"
+            style="color:red"
+            >
+                *Note : This site is hosted on Renderer please wait for few minutes to load
+            </p>
+            <p>{{proj.description}}</p>
+            <ul>
+                <li *ngFor="let role of proj.roles">{{role}}</li>
+            </ul>
+            <div class="skills">
+                <button class="btn skill-btn" *ngFor="let skill of proj.skills">{{skill}}</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="col-md-1"></div>
+  </div>
+</div>
+
+
+

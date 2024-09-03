@@ -44,8 +44,9 @@ $fontFamily:'Montserrat', sans-serif;
             // box-shadow:0 4px 8px 0;
             box-shadow: 1rem 0.2rem 0.8rem;
             height:auto;
-            height:15rem;
-            width:22rem;
+            min-height:15rem;
+            min-width:22rem;
+            
             margin:.3rem;
             cursor: pointer;
             &:hover {
