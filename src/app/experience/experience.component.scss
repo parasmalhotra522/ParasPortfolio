@@ -252,6 +252,7 @@ $fontFamily: 'Montserrat', sans-serif;
         border: 1px solid $fontColor;
         background:#fff;
         margin: 1rem;
+        margin-bottom:2rem;
         padding:1rem;  
         text-decoration: none; 
         &:hover,
@@ -298,5 +299,13 @@ $fontFamily: 'Montserrat', sans-serif;
            font-size:34px;
            line-height: 2.6rem;
         }   
+     
+        .experience-item {
+            .experience-content {
+                .git-btn {
+                    margin:2rem;
+                }
+            }
+        }
     }
 }

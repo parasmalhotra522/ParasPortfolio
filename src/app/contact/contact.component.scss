@@ -143,22 +143,29 @@ $color: #FF7F50;
 
 
 
-// @media (max-width:768px){
-//     .card {
-//         width:100% !important;
-//         height: auto !important;
-//         // padding:.3rem;
-//         margin:0 !important;
-//         margin-bottom: 1rem !important;
+@media (max-width:768px){
+    .card {
+        width:100% !important;
+        height: auto !important;
+        // padding:.3rem;
+        margin:0 !important;
+        margin-bottom: 1rem !important;
        
-//         .text {
-//             padding:.3rem !important;
-//             p {
-//                 font-size:1.3em !important;
-//             }
-//         }
-//     }
-// }
+        .text {
+            padding:.3rem !important;
+            p {
+                font-size:1.3em !important;
+            }
+        }
+    }
+    .profile-section {
+        .social {
+            .contacts {
+                width:90%;
+            }
+        }
+    }
+}
 
 
 
